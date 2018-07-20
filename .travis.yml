@@ -8,3 +8,8 @@ addons:
   apt:
     packages:
       - build-essential
+jobs:
+  include:
+    - stage: Code Coverage
+        after_success:
+          - coveralls --exclude tests --gcov-options '\-lp'
