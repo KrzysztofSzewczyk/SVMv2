@@ -1,3 +1,10 @@
+
+/**
+ * MAIN.C
+ * 
+ * This file is setting up virtual machine with data read from file passed as parameter.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
