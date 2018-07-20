@@ -1,6 +1,7 @@
 language: c
 script:
   - sudo apt-get update
+  - chmod 777 build_linux.sh
   - ./build_linux.sh
 sudo: true
 addons:
