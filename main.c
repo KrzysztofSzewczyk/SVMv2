@@ -11,9 +11,6 @@
 #include "vm.h"
 #include "opcode.h"
 
-#ifndef ENDIAN_H
-#define ENDIAN_H
-
 #if (defined(_WIN16) || defined(_WIN32) || defined(_WIN64)) && !defined(__WINDOWS__)
     #define __WINDOWS__
 #endif
@@ -90,8 +87,6 @@
     #define __PDP_ENDIAN    PDP_ENDIAN
 #else
     #error Platform not supported
-#endif
-
 #endif
 
 static void cthbo(bytecode, length) bytecode_t *bytecode; size_t length; {
