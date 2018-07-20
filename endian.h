@@ -1,4 +1,13 @@
 
+/**
+ * This file is serving mainly endianess-oriented functions.
+ * It's detecting operating system running and tries to 
+ * define functions converting input data according to
+ * machine endianess.
+ * 
+ * Warning: This code will not work on some platforms.
+ */
+
 #ifndef ENDIAN_H
 #define ENDIAN_H
 
