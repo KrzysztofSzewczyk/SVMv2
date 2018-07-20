@@ -1,0 +1,16 @@
+version: build{build}
+clone_folder: c:\svm
+clone_depth: 5
+build_script:
+  - c:
+  - cd svm
+  - build_windows.bat
+test: off
+# test_script:
+#   - cd c:\dev\install
+#   - start /wait %example%.exe test
+#   - cd c:\dev\examples
+matrix:
+  fast_finish: true
+artifacts:
+- path: '*.exe'
