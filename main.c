@@ -20,7 +20,7 @@ static void cthbo(bytecode, length) bytecode_t *bytecode; size_t length; {
 }
 
 main(argc, argv) int argc; char * argv[]; {
-    VirtualMachine *vm;
+    vm_t *vm;
     long size;
     FILE * program;
     bytecode_t * bytecode;

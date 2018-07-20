@@ -18,7 +18,7 @@
 #define NEXTCODE(vm) (vm->code[vm->pc++])
 #define MAX(a,b) (((a)>(b))?(a):(b))
 
-struct VirtualMachine {
+struct vm_t {
 	int32_t loc_size;
 
 	bytecode_t * locals;
@@ -28,8 +28,8 @@ struct VirtualMachine {
 	int32_t opsp, pc, sp, fp;
 };
 
-VirtualMachine* create_vm(code, pc, datasize) bytecode_t *code; int32_t pc; int32_t datasize; {
-	VirtualMachine *vm = malloc(sizeof(*vm));
+vm_t* creatvm(code, pc, datasize) bytecode_t *code; int32_t pc; int32_t datasize; {
+	vm_t *vm = malloc(sizeof(*vm));
 	vm->code = code;
 	vm->pc = pc;
 	vm->opsp = -1;
@@ -41,13 +41,13 @@ VirtualMachine* create_vm(code, pc, datasize) bytecode_t *code; int32_t pc; int3
 	return vm;
 }
 
-void delete_vm(vm) VirtualMachine *vm; {
+void delvm(vm) vm_t *vm; {
 	free(vm->stack);
 	free(vm->locals);
 	free(vm);
 }
 
-void exec(vm) VirtualMachine *vm; {
+void exec(vm) vm_t *vm; {
     bytecode_t a, b, v, addr, offset, argc;
     
 	for(;;)

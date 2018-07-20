@@ -15,10 +15,10 @@ typedef union bytecode_t {
 	int32_t int32;
 	float   fp32;
 } bytecode_t;
-typedef struct VirtualMachine VirtualMachine;
+typedef struct vm_t vm_t;
 
-VirtualMachine* create_vm(bytecode_t *code, int32_t pc, int32_t datasize);
-void delete_vm(VirtualMachine *vm);
-void exec(VirtualMachine *vm);
+vm_t* creatvm(bytecode_t *code, int32_t pc, int32_t datasize);
+void deletvm(vm_t *vm);
+void exec(vm_t *vm);
 
 #endif
