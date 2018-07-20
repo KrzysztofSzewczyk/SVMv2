@@ -108,7 +108,7 @@ main(argc, argv) int argc; char * argv[]; {
 	}
 	
 	program = fopen(argv[1], "r+b");
-	if(program == NULL) {
+	if(!program) {
 		fprintf(stderr, "Error: Could not open provided file.\n");
 		exit(1);
 	}
@@ -124,9 +124,9 @@ main(argc, argv) int argc; char * argv[]; {
 
 	cthbo(bytecode, size);
 
-	vm = create_vm(bytecode, 0, 4096 * 1024);
+	vm = creatvm(bytecode, 0, 4096 * 1024);
 	exec(vm);
-	delete_vm(vm);
+	deletvm(vm);
 
 	free(bytecode);
 }
