@@ -1,0 +1,9 @@
+language: c
+script:
+  - sudo apt-get update
+  - ./build.sh
+sudo: true
+addons:
+  apt:
+    packages:
+- build-essential
