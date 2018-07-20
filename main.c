@@ -9,7 +9,6 @@
 #include <stdlib.h>
 
 #include "vm.h"
-#include "opcode.h"
 
 #if (defined(_WIN16) || defined(_WIN32) || defined(_WIN64)) && !defined(__WINDOWS__)
     #define __WINDOWS__
@@ -126,7 +125,7 @@ main(argc, argv) int argc; char * argv[]; {
 
 	vm = creatvm(bytecode, 0, 4096 * 1024);
 	exec(vm);
-	deletvm(vm);
+	delvm(vm);
 
 	free(bytecode);
 }

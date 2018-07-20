@@ -12,10 +12,10 @@
 #include <stdio.h>
 
 #define STACK_SIZE 1024
-#define PUSH(vm, v) (vm->stack[++vm->opsp] = (bytecode_t)(v))
-#define POP(vm) (vm->stack[vm->opsp--])
-#define PUSHARG(vm, v) (vm->locals[vm->sp++] = v)
-#define NEXTCODE(vm) (vm->code[vm->pc++])
+#define PUSH(vm, v) vm->stack[++vm->opsp] = (bytecode_t)(v)
+#define POP(vm) vm->stack[vm->opsp--]
+#define PUSHARG(vm, v) vm->locals[vm->sp++] = v
+#define NEXTCODE(vm) vm->code[vm->pc++]
 #define MAX(a,b) (((a)>(b))?(a):(b))
 
 struct vm_t {
@@ -144,10 +144,10 @@ void exec(vm) vm_t *vm; {
 			POP(vm);
 			continue;
 		case PRINT:
-			printf("%d\n", v.POP(vm));
+			printf("%d\n", POP(vm).int32);
 			continue;
 		case PRINT_FP:
-			printf("%f\n", v.POP(vm));
+			printf("%f\n", POP(vm).fp32);
 			continue;
 		default:
 			continue;
