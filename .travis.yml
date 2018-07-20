@@ -6,4 +6,4 @@ sudo: true
 addons:
   apt:
     packages:
-- build-essential
+      - build-essential
