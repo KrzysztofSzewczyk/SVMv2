@@ -6,7 +6,6 @@
  */
 
 #include "vm.h"
-#include "opcode.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -79,7 +78,7 @@ void delvm(vm) vm_t *vm; {
 }
 
 void exec(vm) vm_t *vm; {
-    bytecode_t a, b, v, addr, offset, argc;
+    bytecode_t v, addr, offset, argc;
     
 	for(;;)
 		switch (NEXTCODE(vm).int32) {
