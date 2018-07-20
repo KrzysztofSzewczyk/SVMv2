@@ -1,9 +1,5 @@
 version: build{build}
-clone_folder: c:\svm
-clone_depth: 5
 build_script:
-  - c:
-  - cd svm
   - build_windows.bat
 test: off
 # test_script:
