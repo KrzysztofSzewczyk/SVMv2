@@ -1,5 +1,6 @@
 version: build{build}
 build_script:
+  - choco install mingw
   - build_windows.bat
 test: off
 # test_script:
