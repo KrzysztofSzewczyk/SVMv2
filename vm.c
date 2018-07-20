@@ -1,3 +1,10 @@
+
+/**
+ * VM.C
+ * 
+ * This file contains implementation for VM.H declared prototypes.
+ */
+
 #include "vm.h"
 #include "opcode.h"
 
@@ -146,5 +153,3 @@ void exec(vm) VirtualMachine *vm; {
 			continue;
 		}
 }
-
-#undef MAX

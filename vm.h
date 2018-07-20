@@ -1,3 +1,10 @@
+
+/**
+ * VM.H
+ *
+ * This file is corresponding header to VM.C
+ */
+
 #ifndef VM_H
 #define VM_H
 
