@@ -1,7 +1,7 @@
 version: build{build}
 build_script:
   - choco install mingw
-  - build_windows.bat
+  - C:\tools\mingw64\bin\gcc.exe vm.c main.c -o main.exe
 test: off
 # test_script:
 #   - cd c:\dev\install
