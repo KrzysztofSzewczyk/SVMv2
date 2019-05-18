@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/KrzysztofSzewczyk/SVMv2.svg?branch=master)](https://travis-ci.org/KrzysztofSzewczyk/SVMv2)
 
-SVMv2 is simple stack-based virtual machine attempt. It has currently very small instruction set.
+SVMv2 is simple stack-based virtual machine base for creating your own virtual machine. It has currently very small instruction set.
  * [Project WIKI](https://github.com/KrzysztofSzewczyk/SVMv2/wiki)
  * [Issues](https://github.com/KrzysztofSzewczyk/SVMv2/issues)
  * [Pull Requests](https://github.com/KrzysztofSzewczyk/SVMv2/pulls)
